@@ -1,0 +1,30 @@
+﻿<Window x:Class="PL.customer.OrderTracking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.customer"
+        mc:Ignorable="d"
+        Title="OrderTracking" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="114,116,0,0" TextWrapping="Wrap" Text="Order #" VerticalAlignment="Top" Height="183" Width="565"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,135,0,0" TextWrapping="Wrap" Text="{Binding Path=ID }" VerticalAlignment="Top" Height="21" Width="76"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,203,0,0" TextWrapping="Wrap" Text="Order Status:" VerticalAlignment="Top" Height="24" Width="83"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,227,0,0" TextWrapping="Wrap" Text="{Binding Path=Status }" VerticalAlignment="Top" Height="23" Width="86"/>
+        <ListView x:Name="orderDates"   FontFamily="Amatic SC" FontSize="16" Cursor="Hand"  Margin="233,99,69,118" ItemsSource="{Binding mylist}">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Employee Information">
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Item1}" Header="date" Width="150"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Item2}" Header="status" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="order details" Name="order_details" Click="show_order_details" Style="{StaticResource BtnStyle}" Margin="65,270,0,0" Width="137"/>
+        <Button Content="⬅️" x:Name="goBack" Click="go_Back" Style="{StaticResource BtnStyle}" Margin="678,358,0,0"/>
+        <Button Content="back to home" Margin="65,363,0,0" Style="{StaticResource BtnStyle}" Click="Button_Click" Width="137"/>
+
+    </Grid>
+</Window>

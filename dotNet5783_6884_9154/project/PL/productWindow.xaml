@@ -1,0 +1,29 @@
+﻿<Window x:Class="PL.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="ProductWindow" Height="450" Width="800">
+    
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="input_product_name" HorizontalAlignment="Left" Margin="318,87,0,0" TextWrapping="Wrap" Text="{Binding Path=Item1.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" IsReadOnly = "{Binding Item2}"/>
+        <TextBox  Name="input_product_price" HorizontalAlignment="Left" Margin="318,140,0,0" TextWrapping="Wrap" Text="{Binding Path=Item1.Price,StringFormat=' {0} $'}" VerticalAlignment="Top" Width="120" IsReadOnly = "{Binding Item2}"/>
+        <TextBox Name="input_product_instock" HorizontalAlignment="Left" Margin="318,199,0,0" TextWrapping="Wrap" Text="{Binding Path=Item1.inStock}" VerticalAlignment="Top" Width="120" IsReadOnly = "{Binding Item2}"/>
+        <ComboBox Name="categorySelectorBox" Margin="318,243,347,10" SelectedValue="{Binding Path=Item1.Category}" ItemsSource="{Binding Item4}" IsEnabled="{Binding Item3}" IsReadOnly="{Binding Item2}"/>
+        <Button  x:Name="addProductBtn" Content="add" HorizontalAlignment="Left" Margin="316,80,0,0" Grid.Row="1" VerticalAlignment="Top" Click="addProductBtn_Click" Background="#FFB19578" FontFamily="Amatic SC" FontSize="16" />
+        <Label Content="product name" HorizontalAlignment="Left" Margin="318,57,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="18"/>
+        <Label Content="price" HorizontalAlignment="Left" Margin="318,110,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="18"/>
+        <Label Content="amount in stock" HorizontalAlignment="Left" Margin="318,163,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="18"/>
+        <Button x:Name="updateProductBtn" Content="update" HorizontalAlignment="Left" Margin="232,80,0,0" Grid.Row="1" Visibility="{Binding Path= Item2, Converter={StaticResource FalseToHiddenConverter}}" VerticalAlignment="Top" Click="updateProductBtn_Click" RenderTransformOrigin="1.668,0.635" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578"/>
+        <Button x:Name="deleteProductBtn" Content="delete" HorizontalAlignment="Left" Margin="385,80,0,0" Grid.Row="1" VerticalAlignment="Top" Click="deleteProductBtn_Click" FontFamily="Amatic SC" FontSize="16" BorderBrush="Black" Foreground="Black" Background="#FFB19578" Visibility="{Binding Path= Item2, Converter={StaticResource FalseToHiddenConverter}}"/>
+        <Label Content="CATEGORY" HorizontalAlignment="Left" Height="35" Margin="318,217,0,0" VerticalAlignment="Top" Width="108" FontFamily="Amatic SC" FontSize="18"/>
+        <Button x:Name="back" Content="Back➡" HorizontalAlignment="Left" Margin="713,80,0,0" Grid.Row="1" VerticalAlignment="Top" Click="backToList1" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578"/>
+        <Button x:Name="addBtn" Content="add to cart" HorizontalAlignment="Left" Margin="506,80,0,0" Grid.Row="1" VerticalAlignment="Top" Visibility="{Binding Path= Item3, Converter={StaticResource FalseToHiddenConverter}}" Click="addToCart" FontFamily="Amatic SC" FontSize="16" BorderBrush="Black" Foreground="Black" Background="#FFB19578"/>
+    </Grid>
+</Window>

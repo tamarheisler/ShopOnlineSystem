@@ -1,0 +1,60 @@
+﻿<Window x:Class="PL.CartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="CartWindow" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="321*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="317*"/>
+            <RowDefinition Height="117*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="input_order_totalPrice" HorizontalAlignment="Left" Margin="15,192,0,0" TextWrapping="Wrap"  Text="{Binding Path=cart.TotalPrice}" VerticalAlignment="Top" Width="120" Height="18" />
+        <Label Content="total price:" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="18" Height="33" Width="108" RenderTransformOrigin="2.612,-0.881"/>
+        <ListView ItemsSource="{Binding cart.Items}" Margin="167,24,67,24" Grid.ColumnSpan="2" d:ItemsSource="{d:SampleData ItemCount=5}"  Name="itemsList">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path= ProductID}" Header="ID" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductName}" Header="Name" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Header="Price" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Amount}" Header="amount" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TotalPrice}" Header="total price" Width="100"/>
+                    <GridViewColumn Header="" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Button x:Name="addProductAmount" Content="+" Margin="10,30,0,0"  VerticalAlignment="Stretch" Click="addProductBtn_Click" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578"/>
+
+                                    <Button x:Name="decreaseProductAmount" Content="-" HorizontalAlignment="Right" Margin="0,30,9,0"  VerticalAlignment="Top" Click="decreaseProductBtn_Click" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578"/>
+                                    <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                                    </StackPanel>
+                                </Grid>
+
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+        <Button x:Name="back" Content="Back➡" HorizontalAlignment="Left" Margin="68,65,0,0" Grid.Row="1" VerticalAlignment="Top" Click="BackToList" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578" Grid.Column="1"/>
+        <Button x:Name="back_Copy" Content="confirm cart" HorizontalAlignment="Left" Margin="377,65,0,0" Grid.Row="1" VerticalAlignment="Top" Click="cartConfirmation" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578"/>
+    </Grid>
+</Window>

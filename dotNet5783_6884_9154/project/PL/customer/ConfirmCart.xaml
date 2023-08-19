@@ -1,0 +1,20 @@
+﻿<Window x:Class="PL.customer.ConfirmCart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.customer"
+        mc:Ignorable="d"
+        Title="ConfirmCart" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="360,80,0,0" TextWrapping="Wrap" Text="{Binding CustomerName}" VerticalAlignment="Top" Width="120" Name="CustomerName" />
+        <TextBox HorizontalAlignment="Left" Margin="360,137,0,0" TextWrapping="Wrap" Text="{Binding CustomerEmail}" VerticalAlignment="Top" Width="120"  Name="CustomerEmail"/>
+        <TextBox HorizontalAlignment="Left" Margin="360,199,0,0" TextWrapping="Wrap" Text="{Binding CustomerAddress}" VerticalAlignment="Top" Width="120"  Name="CustomerAddress"/>
+        <Button Content="Confirm" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578" Height="24" Width="82" RenderTransformOrigin="-0.489,0.677" Click="Button_Click" />
+        <Button Content="⬅️" HorizontalAlignment="Left" Margin="681,301,0,0" VerticalAlignment="Top" FontFamily="Amatic SC" FontSize="16" Background="#FFB19578" Height="24" Width="82" RenderTransformOrigin="-0.489,0.677" Click="goBack" />
+        <Label Content="Enter Your Name:" HorizontalAlignment="Left" Margin="369,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Your E-mail:" HorizontalAlignment="Left" Margin="371,111,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Your Address:" HorizontalAlignment="Left" Margin="363,173,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -8,14 +8,15 @@ Project structure: 3 Tier architecture.
 
 Using:
 
-Object Oriented Design.
-Design pattern.
-Treads.
-Xml.
-WPF.
-Reflection.
-Events.
-Dependency Property.
-Singleton.
-Factory.
-Query Expression and Linq.
+
+    Object Oriented Design.
+    Design pattern.
+    Treads.
+    Xml.
+    WPF.
+    Reflection.
+    Events.
+    Dependency Property.
+    Singleton.
+    Factory.
+    Query Expression and Linq.

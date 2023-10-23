@@ -1,4 +1,4 @@
-Shop System
+# Shop Online System (windows application)
 
 
 Development of a window application for managing a shop system, including customer and employee interface.

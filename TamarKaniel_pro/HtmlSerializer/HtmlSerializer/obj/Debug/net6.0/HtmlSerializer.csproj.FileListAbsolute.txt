@@ -1,0 +1,17 @@
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlSerializer.exe
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlSerializer.deps.json
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlSerializer.runtimeconfig.json
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlSerializer.dll
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlSerializer.pdb
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.csproj.AssemblyReference.cache
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.GeneratedMSBuildEditorConfig.editorconfig
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.AssemblyInfoInputs.cache
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.AssemblyInfo.cs
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.csproj.CoreCompileInputs.cache
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.dll
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\refint\HtmlSerializer.dll
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.pdb
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\HtmlSerializer.genruntimeconfig.cache
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\obj\Debug\net6.0\ref\HtmlSerializer.dll
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlTags.json
+D:\USER\Downloads\TamarKaniel_pro\HtmlSerializer\HtmlSerializer\bin\Debug\net6.0\HtmlVoidTags.json
